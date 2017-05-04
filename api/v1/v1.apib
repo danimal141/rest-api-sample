@@ -1,0 +1,59 @@
+
+# Group V1
+
+## /api/v1/users/{user_id}
+
++ Parameters
+    + user_id: `1` (number)
+
+### Users Show [GET]
+
+
++ Response 200 (application/json; charset=UTF-8)
+
+
+
+    + Body
+
+            {
+                "Id": 1,
+                "UserName": "testuser1"
+            }        
+
+
+
+## /api/v1/users{?pagination}
+
++ Parameters
+    + pagination: `false` (boolean)
+
+### Users Index [GET]
+### Query parameter
+
+key        |value  |description
+----------:|------:|----------------------------
+pagination |false  |ページネーション機能は未実装なのでfalseが必須
+
+
++ Response 200 (application/json; charset=UTF-8)
+
+
+
+    + Body
+
+            [
+                {
+                    "Id": 0,
+                    "UserName": "testuser0"
+                },
+                {
+                    "Id": 1,
+                    "UserName": "testuser1"
+                },
+                {
+                    "Id": 2,
+                    "UserName": "testuser2"
+                }
+            ]        
+
+
